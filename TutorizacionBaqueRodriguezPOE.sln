@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorizacionBaqueRodriguezPOE", "TutorizacionBaqueRodriguezPOE\TutorizacionBaqueRodriguezPOE.csproj", "{D9D82BC2-22CE-459C-8490-A0682C0B340C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryPOE", "ClassLibraryPOE\ClassLibraryPOE.csproj", "{FDE30D9A-7255-4E7C-94AA-899360F29E75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9D82BC2-22CE-459C-8490-A0682C0B340C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D82BC2-22CE-459C-8490-A0682C0B340C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D82BC2-22CE-459C-8490-A0682C0B340C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D82BC2-22CE-459C-8490-A0682C0B340C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE30D9A-7255-4E7C-94AA-899360F29E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE30D9A-7255-4E7C-94AA-899360F29E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE30D9A-7255-4E7C-94AA-899360F29E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE30D9A-7255-4E7C-94AA-899360F29E75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {779E599D-DB59-4CAD-923C-87BCD7E845A7}
+	EndGlobalSection
+EndGlobal
