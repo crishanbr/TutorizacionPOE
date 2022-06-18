@@ -1,3 +1,4 @@
+using Estudiante = ClassLibraryPOE.Estudiante;
 using Timer = System.Windows.Forms.Timer;
 
 namespace TutorizacionBaqueRodriguezPOE
@@ -26,10 +27,6 @@ namespace TutorizacionBaqueRodriguezPOE
 
         private void iconButton7_Click(object sender, EventArgs e)
         {
-            /* MessageBox.Show("¡CrishanDev!\n\n" +
-                 "Este es un proyecto de programación orientada a objetos.\n" +
-                 "Para ver el código fuente, visita mi repositorio en GitHub.\n" +
-                 "https://www.github.com/crishanbr\n\n");*/
             string result = frmInfo.ShowBox("Ficha del Estudiante:\n\n" +
                 "Baque Rodriguez Cristhofer Ignacio\n" +
                 "Programación Orientada a Eventos\n" +
@@ -53,22 +50,26 @@ namespace TutorizacionBaqueRodriguezPOE
             string apellido = tbApellido.Text;
             string carrera = tbCarrera.Text;
 
-            if (nombre != "" && apellido != "" && carrera != "")
-            {
+
                 ListViewItem item = new ListViewItem(nombre);
                 item.SubItems.Add(apellido);
                 item.SubItems.Add(carrera);
-                listView1.Items.Add(item);
-            }
-            else
-            {
-                MessageBox.Show("No puede dejar campos vacios");
-            }
+                listadoAlumnos.Items.Add(item);
         }
         
         public void AgregarItem()
         {
-            
+            Estudiante objEstudiante = new Estudiante();
+            objEstudiante.Cedula = Int32.Parse(tbCedula.Text.Trim());
+            objEstudiante.Nombre = tbNombre.Text.Trim();
+            objEstudiante.Apellido = tbApellido.Text.Trim();
+            objEstudiante.Carrera = tbCarrera.Text.Trim();
+
+            ListViewItem itemAlumno = new ListViewItem();
+            itemAlumno = listadoAlumnos.Items.Add(objEstudiante.Cedula.ToString());
+            itemAlumno.SubItems.Add(objEstudiante.Nombre);
+            itemAlumno.SubItems.Add(objEstudiante.Apellido);
+            itemAlumno.SubItems.Add(objEstudiante.Carrera);
         }
         
         public void VerficarCamposTexto(object sender, KeyPressEventArgs e)

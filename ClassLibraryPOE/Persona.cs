@@ -29,7 +29,6 @@ namespace ClassLibraryPOE
             get { return apellido; }
             set { apellido = value; }
         }
-
         public Persona(int cedula, string nombre, string apellido)
         {
             this.cedula = cedula;
