@@ -55,12 +55,12 @@
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbCedula = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbCarrera = new System.Windows.Forms.TextBox();
+            this.tbApellido = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ibtnAdd = new FontAwesome.Sharp.IconButton();
@@ -245,6 +245,7 @@
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.SmallIcon;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // panel6
             // 
@@ -329,12 +330,12 @@
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel8.Controls.Add(this.textBox4);
+            this.panel8.Controls.Add(this.tbNombre);
             this.panel8.Controls.Add(this.label3);
-            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.tbCedula);
             this.panel8.Controls.Add(this.label4);
-            this.panel8.Controls.Add(this.textBox2);
-            this.panel8.Controls.Add(this.textBox3);
+            this.panel8.Controls.Add(this.tbCarrera);
+            this.panel8.Controls.Add(this.tbApellido);
             this.panel8.Controls.Add(this.label2);
             this.panel8.Controls.Add(this.label1);
             this.panel8.Location = new System.Drawing.Point(10, 16);
@@ -343,15 +344,18 @@
             this.panel8.Size = new System.Drawing.Size(652, 100);
             this.panel8.TabIndex = 11;
             // 
-            // textBox4
+            // tbNombre
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(81, 64);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(176, 25);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbNombre.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbNombre.ForeColor = System.Drawing.Color.White;
+            this.tbNombre.Location = new System.Drawing.Point(81, 64);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(176, 25);
+            this.tbNombre.TabIndex = 4;
+            this.tbNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // label3
             // 
@@ -362,15 +366,18 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "CARRERA:";
             // 
-            // textBox1
+            // tbCedula
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(81, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 25);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.tbCedula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCedula.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbCedula.ForeColor = System.Drawing.Color.White;
+            this.tbCedula.Location = new System.Drawing.Point(81, 12);
+            this.tbCedula.Name = "tbCedula";
+            this.tbCedula.Size = new System.Drawing.Size(176, 25);
+            this.tbCedula.TabIndex = 1;
+            this.tbCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCedula_KeyPress);
             // 
             // label4
             // 
@@ -381,26 +388,31 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "CEDULA:";
             // 
-            // textBox2
+            // tbCarrera
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(50)))));
-            this.textBox2.Location = new System.Drawing.Point(379, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 25);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCarrera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.tbCarrera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCarrera.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbCarrera.ForeColor = System.Drawing.Color.White;
+            this.tbCarrera.Location = new System.Drawing.Point(379, 12);
+            this.tbCarrera.Name = "tbCarrera";
+            this.tbCarrera.Size = new System.Drawing.Size(176, 25);
+            this.tbCarrera.TabIndex = 1;
+            this.tbCarrera.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCarrera.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCarrera_KeyPress);
             // 
-            // textBox3
+            // tbApellido
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(379, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 25);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.tbApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbApellido.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbApellido.ForeColor = System.Drawing.Color.White;
+            this.tbApellido.Location = new System.Drawing.Point(379, 64);
+            this.tbApellido.Name = "tbApellido";
+            this.tbApellido.Size = new System.Drawing.Size(176, 25);
+            this.tbApellido.TabIndex = 5;
+            this.tbApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellido_KeyPress);
             // 
             // label2
             // 
@@ -443,6 +455,7 @@
             this.ibtnAdd.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.ibtnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnAdd.UseVisualStyleBackColor = false;
+            this.ibtnAdd.Click += new System.EventHandler(this.ibtnAdd_Click);
             // 
             // Form1
             // 
@@ -482,10 +495,10 @@
         private GroupBox groupBox1;
         private Label label2;
         private Label label1;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox tbApellido;
+        private TextBox tbNombre;
+        private TextBox tbCarrera;
+        private TextBox tbCedula;
         private FontAwesome.Sharp.IconButton ibtnAdd;
         private GroupBox groupBox2;
         private FontAwesome.Sharp.IconButton iconButton4;
