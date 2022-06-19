@@ -1,6 +1,6 @@
 ﻿namespace TutorizacionBaqueRodriguezPOE
 {
-    partial class Form1 
+    partial class frmMain 
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,20 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            "CEDULA"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248))))), System.Drawing.Color.Empty, new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point));
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
-            "APELLIDO"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248))))), System.Drawing.Color.Empty, null);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
-            "NOMBRE"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248))))), System.Drawing.Color.Empty, null);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
-            "CARRERA"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248))))), System.Drawing.Color.Empty, null);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.ibtnInfo = new FontAwesome.Sharp.IconButton();
+            this.ibtnGitHub = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -49,10 +42,15 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.listadoAlumnos = new System.Windows.Forms.ListView();
+            this.Cedula = new System.Windows.Forms.ColumnHeader();
+            this.Nombre = new System.Windows.Forms.ColumnHeader();
+            this.Apellido = new System.Windows.Forms.ColumnHeader();
+            this.Carrera = new System.Windows.Forms.ColumnHeader();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.listTittle = new System.Windows.Forms.Label();
+            this.ibtnListarAgregados = new FontAwesome.Sharp.IconButton();
+            this.ibtnDelete = new FontAwesome.Sharp.IconButton();
+            this.ibtnListarEliminados = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tbNombre = new System.Windows.Forms.TextBox();
@@ -112,8 +110,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.panel2.Controls.Add(this.iconButton7);
-            this.panel2.Controls.Add(this.iconButton6);
+            this.panel2.Controls.Add(this.ibtnInfo);
+            this.panel2.Controls.Add(this.ibtnGitHub);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -122,45 +120,44 @@
             this.panel2.Padding = new System.Windows.Forms.Padding(8);
             this.panel2.Size = new System.Drawing.Size(784, 50);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // iconButton7
+            // ibtnInfo
             // 
-            this.iconButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.iconButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
-            this.iconButton7.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 27;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton7.Location = new System.Drawing.Point(688, 8);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(41, 34);
-            this.iconButton7.TabIndex = 12;
-            this.iconButton7.UseVisualStyleBackColor = false;
-            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
+            this.ibtnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ibtnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnInfo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ibtnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnInfo.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.ibtnInfo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnInfo.IconSize = 27;
+            this.ibtnInfo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ibtnInfo.Location = new System.Drawing.Point(688, 8);
+            this.ibtnInfo.Name = "ibtnInfo";
+            this.ibtnInfo.Size = new System.Drawing.Size(41, 34);
+            this.ibtnInfo.TabIndex = 12;
+            this.ibtnInfo.UseVisualStyleBackColor = false;
+            this.ibtnInfo.Click += new System.EventHandler(this.ibtnInfo_Click);
             // 
-            // iconButton6
+            // ibtnGitHub
             // 
-            this.iconButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.iconButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Github;
-            this.iconButton6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 27;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton6.Location = new System.Drawing.Point(735, 8);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(41, 34);
-            this.iconButton6.TabIndex = 11;
-            this.iconButton6.UseVisualStyleBackColor = false;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            this.ibtnGitHub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ibtnGitHub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnGitHub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnGitHub.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ibtnGitHub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnGitHub.IconChar = FontAwesome.Sharp.IconChar.Github;
+            this.ibtnGitHub.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnGitHub.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnGitHub.IconSize = 27;
+            this.ibtnGitHub.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ibtnGitHub.Location = new System.Drawing.Point(735, 8);
+            this.ibtnGitHub.Name = "ibtnGitHub";
+            this.ibtnGitHub.Size = new System.Drawing.Size(41, 34);
+            this.ibtnGitHub.TabIndex = 11;
+            this.ibtnGitHub.UseVisualStyleBackColor = false;
+            this.ibtnGitHub.Click += new System.EventHandler(this.ibtnGitHub_Click);
             // 
             // pictureBox1
             // 
@@ -232,26 +229,46 @@
             // listadoAlumnos
             // 
             this.listadoAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.listadoAlumnos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Cedula,
+            this.Nombre,
+            this.Apellido,
+            this.Carrera});
             this.listadoAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listadoAlumnos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            listViewItem1.Tag = "";
             this.listadoAlumnos.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
+            listViewItem1});
             this.listadoAlumnos.Location = new System.Drawing.Point(0, 0);
             this.listadoAlumnos.Margin = new System.Windows.Forms.Padding(3, 13, 3, 3);
             this.listadoAlumnos.Name = "listadoAlumnos";
             this.listadoAlumnos.Size = new System.Drawing.Size(561, 171);
             this.listadoAlumnos.TabIndex = 12;
             this.listadoAlumnos.UseCompatibleStateImageBehavior = false;
-            this.listadoAlumnos.View = System.Windows.Forms.View.SmallIcon;
-            this.listadoAlumnos.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listadoAlumnos.View = System.Windows.Forms.View.Details;
+            // 
+            // Cedula
+            // 
+            this.Cedula.Text = "Cedula";
+            // 
+            // Nombre
+            // 
+            this.Nombre.Text = "Nombre";
+            // 
+            // Apellido
+            // 
+            this.Apellido.Text = "Apellido";
+            // 
+            // Carrera
+            // 
+            this.Carrera.Text = "Carrera";
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.iconButton5);
-            this.panel6.Controls.Add(this.iconButton3);
-            this.panel6.Controls.Add(this.iconButton4);
+            this.panel6.Controls.Add(this.listTittle);
+            this.panel6.Controls.Add(this.ibtnListarAgregados);
+            this.panel6.Controls.Add(this.ibtnDelete);
+            this.panel6.Controls.Add(this.ibtnListarEliminados);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(10, 18);
             this.panel6.Name = "panel6";
@@ -259,56 +276,68 @@
             this.panel6.Size = new System.Drawing.Size(561, 30);
             this.panel6.TabIndex = 13;
             // 
-            // iconButton5
+            // listTittle
             // 
-            this.iconButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.iconButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
-            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 20;
-            this.iconButton5.Location = new System.Drawing.Point(477, 0);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(24, 24);
-            this.iconButton5.TabIndex = 11;
-            this.iconButton5.UseVisualStyleBackColor = false;
+            this.listTittle.AutoSize = true;
+            this.listTittle.Location = new System.Drawing.Point(3, 6);
+            this.listTittle.Name = "listTittle";
+            this.listTittle.Size = new System.Drawing.Size(236, 17);
+            this.listTittle.TabIndex = 12;
+            this.listTittle.Text = "LISTA DE ESTUDIANTES REGISTRADOS";
             // 
-            // iconButton3
+            // ibtnListarAgregados
             // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 20;
-            this.iconButton3.Location = new System.Drawing.Point(537, 0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(24, 24);
-            this.iconButton3.TabIndex = 9;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.ibtnListarAgregados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ibtnListarAgregados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnListarAgregados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnListarAgregados.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ibtnListarAgregados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnListarAgregados.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+            this.ibtnListarAgregados.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnListarAgregados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnListarAgregados.IconSize = 20;
+            this.ibtnListarAgregados.Location = new System.Drawing.Point(477, 0);
+            this.ibtnListarAgregados.Name = "ibtnListarAgregados";
+            this.ibtnListarAgregados.Size = new System.Drawing.Size(24, 24);
+            this.ibtnListarAgregados.TabIndex = 11;
+            this.ibtnListarAgregados.UseVisualStyleBackColor = false;
+            this.ibtnListarAgregados.Click += new System.EventHandler(this.ibtnListar_Click);
             // 
-            // iconButton4
+            // ibtnDelete
             // 
-            this.iconButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.iconButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.TrashRestore;
-            this.iconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 20;
-            this.iconButton4.Location = new System.Drawing.Point(507, 0);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(24, 24);
-            this.iconButton4.TabIndex = 10;
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.ibtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ibtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnDelete.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ibtnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.ibtnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnDelete.IconSize = 20;
+            this.ibtnDelete.Location = new System.Drawing.Point(537, 0);
+            this.ibtnDelete.Name = "ibtnDelete";
+            this.ibtnDelete.Size = new System.Drawing.Size(24, 24);
+            this.ibtnDelete.TabIndex = 9;
+            this.ibtnDelete.UseVisualStyleBackColor = false;
+            this.ibtnDelete.Click += new System.EventHandler(this.ibtnPalLobby_Click);
+            // 
+            // ibtnListarEliminados
+            // 
+            this.ibtnListarEliminados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ibtnListarEliminados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnListarEliminados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnListarEliminados.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ibtnListarEliminados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnListarEliminados.IconChar = FontAwesome.Sharp.IconChar.TrashRestore;
+            this.ibtnListarEliminados.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnListarEliminados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnListarEliminados.IconSize = 20;
+            this.ibtnListarEliminados.Location = new System.Drawing.Point(507, 0);
+            this.ibtnListarEliminados.Name = "ibtnListarEliminados";
+            this.ibtnListarEliminados.Size = new System.Drawing.Size(24, 24);
+            this.ibtnListarEliminados.TabIndex = 10;
+            this.ibtnListarEliminados.UseVisualStyleBackColor = false;
+            this.ibtnListarEliminados.Click += new System.EventHandler(this.ibtnListarLobby_Click);
             // 
             // groupBox1
             // 
@@ -355,6 +384,7 @@
             this.tbNombre.Size = new System.Drawing.Size(176, 25);
             this.tbNombre.TabIndex = 4;
             this.tbNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNombre.TextChanged += new System.EventHandler(this.CamposRellenados_TextChanged);
             this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // label3
@@ -377,6 +407,7 @@
             this.tbCedula.Size = new System.Drawing.Size(176, 25);
             this.tbCedula.TabIndex = 1;
             this.tbCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCedula.TextChanged += new System.EventHandler(this.CamposRellenados_TextChanged);
             this.tbCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCedula_KeyPress);
             // 
             // label4
@@ -399,6 +430,7 @@
             this.tbCarrera.Size = new System.Drawing.Size(176, 25);
             this.tbCarrera.TabIndex = 1;
             this.tbCarrera.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCarrera.TextChanged += new System.EventHandler(this.CamposRellenados_TextChanged);
             this.tbCarrera.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCarrera_KeyPress);
             // 
             // tbApellido
@@ -412,6 +444,7 @@
             this.tbApellido.Size = new System.Drawing.Size(176, 25);
             this.tbApellido.TabIndex = 5;
             this.tbApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbApellido.TextChanged += new System.EventHandler(this.CamposRellenados_TextChanged);
             this.tbApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellido_KeyPress);
             // 
             // label2
@@ -438,11 +471,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ibtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.ibtnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ibtnAdd.Enabled = false;
             this.ibtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnAdd.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ibtnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnAdd.ForeColor = System.Drawing.Color.IndianRed;
             this.ibtnAdd.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.ibtnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.ibtnAdd.IconColor = System.Drawing.Color.IndianRed;
             this.ibtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnAdd.IconSize = 25;
             this.ibtnAdd.ImageAlign = System.Drawing.ContentAlignment.TopRight;
@@ -457,7 +491,7 @@
             this.ibtnAdd.UseVisualStyleBackColor = false;
             this.ibtnAdd.Click += new System.EventHandler(this.ibtnAdd_Click);
             // 
-            // Form1
+            // frmMain
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
@@ -466,7 +500,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 500);
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -476,6 +510,7 @@
             this.groupBox2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -501,16 +536,21 @@
         private TextBox tbCedula;
         private FontAwesome.Sharp.IconButton ibtnAdd;
         private GroupBox groupBox2;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton ibtnListarEliminados;
+        private FontAwesome.Sharp.IconButton ibtnDelete;
+        private FontAwesome.Sharp.IconButton ibtnListarAgregados;
         private ListView listadoAlumnos;
         private Panel panel6;
         private Panel panel7;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton ibtnGitHub;
         private Panel panel8;
         private Label label3;
         private Label label4;
-        private FontAwesome.Sharp.IconButton iconButton7;
+        private FontAwesome.Sharp.IconButton ibtnInfo;
+        private ColumnHeader Cedula;
+        private ColumnHeader Nombre;
+        private ColumnHeader Apellido;
+        private ColumnHeader Carrera;
+        private Label listTittle;
     }
 }
