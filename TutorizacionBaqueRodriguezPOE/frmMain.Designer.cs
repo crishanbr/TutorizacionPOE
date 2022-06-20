@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ibtnInfo = new FontAwesome.Sharp.IconButton();
             this.ibtnGitHub = new FontAwesome.Sharp.IconButton();
@@ -62,7 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ibtnAdd = new FontAwesome.Sharp.IconButton();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,39 +69,6 @@
             this.groupBox1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.panel3.Controls.Add(this.iconButton1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 52);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.panel3.Size = new System.Drawing.Size(173, 409);
-            this.panel3.TabIndex = 1;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.iconButton1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserGraduate;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.iconButton1.Location = new System.Drawing.Point(10, 10);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(163, 47);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "Alumnos";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -125,6 +88,7 @@
             // 
             this.ibtnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ibtnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnInfo.FlatAppearance.BorderSize = 0;
             this.ibtnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnInfo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ibtnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
@@ -144,6 +108,7 @@
             // 
             this.ibtnGitHub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ibtnGitHub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnGitHub.FlatAppearance.BorderSize = 0;
             this.ibtnGitHub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnGitHub.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ibtnGitHub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
@@ -167,7 +132,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(8, 8);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(173, 34);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -193,26 +158,28 @@
             this.panel5.Controls.Add(this.groupBox2);
             this.panel5.Controls.Add(this.groupBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(173, 52);
+            this.panel5.Location = new System.Drawing.Point(0, 52);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(15);
-            this.panel5.Size = new System.Drawing.Size(611, 409);
+            this.panel5.Size = new System.Drawing.Size(784, 409);
             this.panel5.TabIndex = 4;
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.panel7);
             this.groupBox2.Controls.Add(this.panel6);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            this.groupBox2.Location = new System.Drawing.Point(15, 165);
+            this.groupBox2.Location = new System.Drawing.Point(15, 179);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.groupBox2.Size = new System.Drawing.Size(581, 229);
+            this.groupBox2.Size = new System.Drawing.Size(754, 215);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LISTADO";
@@ -223,12 +190,13 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(10, 48);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(561, 171);
+            this.panel7.Size = new System.Drawing.Size(734, 157);
             this.panel7.TabIndex = 14;
             // 
             // listadoAlumnos
             // 
             this.listadoAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.listadoAlumnos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listadoAlumnos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Cedula,
             this.Nombre,
@@ -236,13 +204,10 @@
             this.Carrera});
             this.listadoAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listadoAlumnos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            listViewItem1.Tag = "";
-            this.listadoAlumnos.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
             this.listadoAlumnos.Location = new System.Drawing.Point(0, 0);
             this.listadoAlumnos.Margin = new System.Windows.Forms.Padding(3, 13, 3, 3);
             this.listadoAlumnos.Name = "listadoAlumnos";
-            this.listadoAlumnos.Size = new System.Drawing.Size(561, 171);
+            this.listadoAlumnos.Size = new System.Drawing.Size(734, 157);
             this.listadoAlumnos.TabIndex = 12;
             this.listadoAlumnos.UseCompatibleStateImageBehavior = false;
             this.listadoAlumnos.View = System.Windows.Forms.View.Details;
@@ -250,18 +215,22 @@
             // Cedula
             // 
             this.Cedula.Text = "Cedula";
+            this.Cedula.Width = 120;
             // 
             // Nombre
             // 
             this.Nombre.Text = "Nombre";
+            this.Nombre.Width = 120;
             // 
             // Apellido
             // 
             this.Apellido.Text = "Apellido";
+            this.Apellido.Width = 120;
             // 
             // Carrera
             // 
             this.Carrera.Text = "Carrera";
+            this.Carrera.Width = 120;
             // 
             // panel6
             // 
@@ -273,7 +242,7 @@
             this.panel6.Location = new System.Drawing.Point(10, 18);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
-            this.panel6.Size = new System.Drawing.Size(561, 30);
+            this.panel6.Size = new System.Drawing.Size(734, 30);
             this.panel6.TabIndex = 13;
             // 
             // listTittle
@@ -289,6 +258,7 @@
             // 
             this.ibtnListarAgregados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ibtnListarAgregados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnListarAgregados.FlatAppearance.BorderSize = 0;
             this.ibtnListarAgregados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnListarAgregados.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ibtnListarAgregados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
@@ -296,7 +266,7 @@
             this.ibtnListarAgregados.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.ibtnListarAgregados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnListarAgregados.IconSize = 20;
-            this.ibtnListarAgregados.Location = new System.Drawing.Point(477, 0);
+            this.ibtnListarAgregados.Location = new System.Drawing.Point(650, 0);
             this.ibtnListarAgregados.Name = "ibtnListarAgregados";
             this.ibtnListarAgregados.Size = new System.Drawing.Size(24, 24);
             this.ibtnListarAgregados.TabIndex = 11;
@@ -307,6 +277,7 @@
             // 
             this.ibtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ibtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnDelete.FlatAppearance.BorderSize = 0;
             this.ibtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnDelete.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ibtnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
@@ -314,7 +285,7 @@
             this.ibtnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.ibtnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnDelete.IconSize = 20;
-            this.ibtnDelete.Location = new System.Drawing.Point(537, 0);
+            this.ibtnDelete.Location = new System.Drawing.Point(710, 0);
             this.ibtnDelete.Name = "ibtnDelete";
             this.ibtnDelete.Size = new System.Drawing.Size(24, 24);
             this.ibtnDelete.TabIndex = 9;
@@ -325,6 +296,7 @@
             // 
             this.ibtnListarEliminados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ibtnListarEliminados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnListarEliminados.FlatAppearance.BorderSize = 0;
             this.ibtnListarEliminados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnListarEliminados.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ibtnListarEliminados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
@@ -332,7 +304,7 @@
             this.ibtnListarEliminados.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.ibtnListarEliminados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnListarEliminados.IconSize = 20;
-            this.ibtnListarEliminados.Location = new System.Drawing.Point(507, 0);
+            this.ibtnListarEliminados.Location = new System.Drawing.Point(680, 0);
             this.ibtnListarEliminados.Name = "ibtnListarEliminados";
             this.ibtnListarEliminados.Size = new System.Drawing.Size(24, 24);
             this.ibtnListarEliminados.TabIndex = 10;
@@ -349,15 +321,17 @@
             this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(581, 150);
+            this.groupBox1.Size = new System.Drawing.Size(754, 150);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS";
             // 
             // panel8
             // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel8.AutoSize = true;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel8.Controls.Add(this.tbNombre);
             this.panel8.Controls.Add(this.label3);
@@ -368,29 +342,35 @@
             this.panel8.Controls.Add(this.label2);
             this.panel8.Controls.Add(this.label1);
             this.panel8.Location = new System.Drawing.Point(10, 16);
+            this.panel8.MaximumSize = new System.Drawing.Size(900, 90);
             this.panel8.Name = "panel8";
             this.panel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panel8.Size = new System.Drawing.Size(652, 100);
+            this.panel8.Size = new System.Drawing.Size(734, 90);
             this.panel8.TabIndex = 11;
             // 
             // tbNombre
             // 
             this.tbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombre.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbNombre.ForeColor = System.Drawing.Color.White;
-            this.tbNombre.Location = new System.Drawing.Point(81, 64);
+            this.tbNombre.Location = new System.Drawing.Point(370, 51);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(176, 25);
+            this.tbNombre.PlaceholderText = "Jane";
+            this.tbNombre.Size = new System.Drawing.Size(176, 18);
             this.tbNombre.TabIndex = 4;
             this.tbNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNombre.WordWrap = false;
             this.tbNombre.TextChanged += new System.EventHandler(this.CamposRellenados_TextChanged);
             this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(306, 14);
+            this.label3.Location = new System.Drawing.Point(241, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 10;
@@ -399,21 +379,26 @@
             // tbCedula
             // 
             this.tbCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.tbCedula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCedula.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbCedula.ForeColor = System.Drawing.Color.White;
-            this.tbCedula.Location = new System.Drawing.Point(81, 12);
+            this.tbCedula.Location = new System.Drawing.Point(6, 51);
             this.tbCedula.Name = "tbCedula";
-            this.tbCedula.Size = new System.Drawing.Size(176, 25);
+            this.tbCedula.PlaceholderText = "0123456789";
+            this.tbCedula.Size = new System.Drawing.Size(176, 18);
             this.tbCedula.TabIndex = 1;
             this.tbCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCedula.WordWrap = false;
             this.tbCedula.TextChanged += new System.EventHandler(this.CamposRellenados_TextChanged);
             this.tbCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCedula_KeyPress);
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 15);
+            this.label4.Location = new System.Drawing.Point(66, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 17);
             this.label4.TabIndex = 9;
@@ -422,35 +407,42 @@
             // tbCarrera
             // 
             this.tbCarrera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.tbCarrera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCarrera.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCarrera.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbCarrera.ForeColor = System.Drawing.Color.White;
-            this.tbCarrera.Location = new System.Drawing.Point(379, 12);
+            this.tbCarrera.Location = new System.Drawing.Point(188, 51);
             this.tbCarrera.Name = "tbCarrera";
-            this.tbCarrera.Size = new System.Drawing.Size(176, 25);
+            this.tbCarrera.PlaceholderText = "Derecho";
+            this.tbCarrera.Size = new System.Drawing.Size(176, 18);
             this.tbCarrera.TabIndex = 1;
             this.tbCarrera.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCarrera.WordWrap = false;
             this.tbCarrera.TextChanged += new System.EventHandler(this.CamposRellenados_TextChanged);
             this.tbCarrera.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCarrera_KeyPress);
             // 
             // tbApellido
             // 
             this.tbApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.tbApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbApellido.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbApellido.ForeColor = System.Drawing.Color.White;
-            this.tbApellido.Location = new System.Drawing.Point(379, 64);
+            this.tbApellido.Location = new System.Drawing.Point(552, 51);
             this.tbApellido.Name = "tbApellido";
-            this.tbApellido.Size = new System.Drawing.Size(176, 25);
+            this.tbApellido.PlaceholderText = "Doe";
+            this.tbApellido.Size = new System.Drawing.Size(176, 18);
             this.tbApellido.TabIndex = 5;
             this.tbApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbApellido.WordWrap = false;
             this.tbApellido.TextChanged += new System.EventHandler(this.CamposRellenados_TextChanged);
             this.tbApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellido_KeyPress);
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(306, 66);
+            this.label2.Location = new System.Drawing.Point(604, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 7;
@@ -458,8 +450,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 67);
+            this.label1.Location = new System.Drawing.Point(424, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 6;
@@ -469,21 +464,23 @@
             // 
             this.ibtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ibtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.ibtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.ibtnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ibtnAdd.Cursor = System.Windows.Forms.Cursors.No;
             this.ibtnAdd.Enabled = false;
+            this.ibtnAdd.FlatAppearance.BorderSize = 0;
             this.ibtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnAdd.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ibtnAdd.ForeColor = System.Drawing.Color.IndianRed;
+            this.ibtnAdd.ForeColor = System.Drawing.Color.Black;
             this.ibtnAdd.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.ibtnAdd.IconColor = System.Drawing.Color.IndianRed;
+            this.ibtnAdd.IconColor = System.Drawing.Color.Black;
             this.ibtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnAdd.IconSize = 25;
             this.ibtnAdd.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.ibtnAdd.Location = new System.Drawing.Point(0, 119);
+            this.ibtnAdd.Location = new System.Drawing.Point(10, 110);
             this.ibtnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.ibtnAdd.Name = "ibtnAdd";
-            this.ibtnAdd.Size = new System.Drawing.Size(581, 31);
+            this.ibtnAdd.Size = new System.Drawing.Size(734, 28);
             this.ibtnAdd.TabIndex = 8;
             this.ibtnAdd.Text = "Añadir";
             this.ibtnAdd.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -496,13 +493,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -512,6 +507,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.ResumeLayout(false);
@@ -519,9 +515,6 @@
         }
 
         #endregion
-
-        private Panel panel3;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private Panel panel2;
         private PictureBox pictureBox1;
         private Panel panel1;

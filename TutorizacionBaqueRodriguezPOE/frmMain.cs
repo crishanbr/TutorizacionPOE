@@ -70,14 +70,15 @@ namespace TutorizacionBaqueRodriguezPOE
         {
             if ((tbCedula.Text == "") || (tbNombre.Text == "") || (tbApellido.Text == "") || (tbCarrera.Text == ""))
             {
+                ibtnAdd.BackColor = Color.FromArgb(134, 94, 94);
+                ibtnAdd.Cursor = Cursors.No;
                 ibtnAdd.Enabled = false;
-                ibtnAdd.ForeColor = Color.IndianRed;
-                ibtnAdd.IconColor = Color.IndianRed;
             }
             else
             {
                 ibtnAdd.Enabled = true;
-                ibtnAdd.ForeColor = Color.FromArgb(148, 163, 184);
+                ibtnAdd.Cursor = Cursors.Default;
+                ibtnAdd.BackColor = Color.FromArgb(98, 200, 100);
             }
         }
         // ----------------------------------------------------------------------------
@@ -85,19 +86,18 @@ namespace TutorizacionBaqueRodriguezPOE
         private void ibtnListarLobby_Click(object sender, EventArgs e)
         {
             ibtnDelete.Enabled = false;
-            ibtnDelete.ForeColor = Color.IndianRed;
+            ibtnDelete.BackColor = Color.FromArgb(134, 94, 94);
             ListarEstudiantesEliminados();
         }
         private void ibtnListar_Click(object sender, EventArgs e)
         {
             ibtnDelete.Enabled = true;
-            ibtnDelete.ForeColor = Color.FromArgb(148, 163, 184);
+            ibtnDelete.BackColor = Color.FromArgb(30, 41, 59);
             listarEstudiantesAgregados();
         }
 
         private void ibtnPalLobby_Click(object sender, EventArgs e)
         {
-            
             if (listadoAlumnos.FocusedItem != null)
             {
                 listaEstudiantesEliminados.Add(new Estudiante(listaEstudiantesAgregados[listadoAlumnos.FocusedItem.Index].Nombre,
@@ -116,7 +116,7 @@ namespace TutorizacionBaqueRodriguezPOE
             }
             else 
             {
-                CustomAlert("error", "Acción denegada", "No se ha podido eliminar un registro debido a que no a seleccionado ninguno");
+                CustomAlert("error", "Acción denegada", "No se ha podido eliminar un registro debido a: que no existen registros o no a seleccionado ninguno");
             }
         }
         // MÉTODOS QUE SIRVEN PARA ALGO XD
